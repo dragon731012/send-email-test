@@ -10,10 +10,10 @@
     message_html: 'Please Find out the attached file'
   };
 
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+  emailjs.send('srbkian', 'template_fcidqus', templateParams)
     .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
+      alert('SUCCESS!', response.status, response.text);
     }, function(error) {
-      console.log('FAILED...', error);
+      alert('FAILED...', error);
     });
 </script>
