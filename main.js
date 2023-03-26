@@ -1,7 +1,7 @@
 
 /* Sending Email from Contact Section */
 (function () {
-    emailjs.init("user_JjbqAZDGwNRomOz_D");
+    emailjs.init("JjbqAZDGwNRomOz_D");
 })();
 
 function sendmail() {
@@ -15,5 +15,5 @@ function sendmail() {
             message: userMessage
         };
 
-        emailjs.send('service_csfmlpo', 'template_15rf4du', contactParams).then(function (res) {})
+        emailjs.send('csfmlpo', '15rf4du', contactParams).then(function (res) {})
 }
