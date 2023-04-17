@@ -1,29 +1,22 @@
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init('c4ibbAoX6wTt3Dj68');
+  })();
+</script>
 <script>
-function sendMail(name, email, subject, message) {
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.set('Authorization', 'Basic ' + btoa('<API Key>'+":" +'<Secret Key>'));
+  var templateParams = {
+    name: 'James',
+    notes: 'Check this out!'
+};
 
-  const data = JSON.stringify({
-    "Messages": [{
-      "From": {"Email": "mdmarotta@icloud.com", "Name": "user"},
-      "To": [{"Email": email, "Name": name}],
-      "Subject": subject,
-      "TextPart": message
-    }]
-  });
-
-  const requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: data,
-  };
-
-  fetch("https://api.mailjet.com/v3.1/send", requestOptions)
-    .then(response => response.text())
-    .then(result => alert(result))
-    .catch(error => alert('error', error));
-}
-
-sendMail('Test Name',"dragon73101emailjs@gmail.com",'Test Subject','Test Message');
+emailjs.send('service_srbkian','template_fcidqus', templateParams)
+	.then(function(response) {
+	   console.log('SUCCESS!', response.status, response.text);
+	}, function(err) {
+	   console.log('FAILED...', err);
+	});
 </script>
