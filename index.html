@@ -1,15 +1,26 @@
-<script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+<script type="text/javascript"
+       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
 <script type="text/javascript">
-  (function () {
-    emailjs.init('c4ibbAoX6wTt3Dj68');
+  (function(){
+     emailjs.init("JjbqAZDGwNRomOz_D");
   })();
-  function sendmessage(user,message1){
-     emailjs.send("service_srbkian","template_fcidqus",{
-	from_name: user,
-	message: message1,
-	});
 </script>
-<button onclick="sendmessage('eaufwsf','rgerfgrdf');">run</button>
+<script>
+ function Send(user1,message1){
+	 var templateParams = {
+		 from_name: user1,
+		 message: message1,
+		 reply_to: 'none'
+	};
+
+
+	emailjs.send('service_csfmlpo', 'template_15rf4du', templateParams)
+		 .then(function(response) {
+				console.log('SUCCESS!', response.status, response.text);
+		 }, function(error) {
+				console.log('FAILED...', error);
+		 });
+ }
+</script>
+<button onclick="Send();>run</button>
