@@ -12,7 +12,7 @@
       message: 'message1',
       reply_to: 'none',
     };
-  emailjs.send('service_csfmlpo', 'template_15rf4du', templateParams)
+  emailjs.sendForm('service_csfmlpo', 'template_15rf4du', templateParams)
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
