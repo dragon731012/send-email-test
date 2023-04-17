@@ -1,21 +1,15 @@
-
 <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
-<button onclick="
-	(function () {
+<script type="text/javascript">
+  (function () {
     emailjs.init('c4ibbAoX6wTt3Dj68');
-    var templateParams = {
-	    from_name: 'ieosfkge',
-	    message: 'sfdughervg'
-		};
-
-	  emailjs.send('service_srbkian','template_fcidqus', templateParams)
-		.then(function(response) {
-			 alert('SUCCESS!', response.status, response.text);
-		}, function(err) {
-			 alert('FAILED...', err);
-		});
-	})();"
->run</button>
+  })();
+  function send(user,message1){
+     emailjs.send("service_srbkian","template_fcidqus",{
+	from_name: user,
+	message: message1,
+	});
+</script>
+<button onclick="send('eaufwsf','rgerfgrdf');">run</button>
