@@ -31,10 +31,10 @@ document.getElementById('form')
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
+      btn.value = 'Suggest';
       alert('Sent!');
     }, (err) => {
-      btn.value = 'Send Email';
+      btn.value = 'Suggest';
       alert(JSON.stringify(err));
     });
 });
@@ -45,12 +45,14 @@ document.getElementById('form')
 }
 
 .field label {
+  text-align: center;
   display: block;
   font-size: 12px;
   color: #777;
 }
 
 .field input {
+  text-align: center;
   display: block;
   min-width: 250px;
   line-height: 1.5;
@@ -58,6 +60,7 @@ document.getElementById('form')
 }
 
 input[type="submit"] {
+  text-align: center;
   display: block;
   padding: 6px 30px;
   font-size: 14px;
